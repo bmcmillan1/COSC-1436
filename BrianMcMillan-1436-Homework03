@@ -3,8 +3,8 @@ using namespace std;
 
 int main()
 {
-  char firstName, lastName
-  int age
+  string firstName, lastName;
+  int age;
   
   cout << "What is your first name?" << endl; //endline function
   cin >> firstName; //user inputs their first name
@@ -15,7 +15,7 @@ int main()
   cout << "What is your age?" << endl;
   cin >> age;
   
-  cout << "Your name is " << firstName << " " << lastName << ".\n"; //displays first and last and endlines
+  cout << "Your name is " << firstName << " " << lastName << ".\n"; //displays first and last 
   cout << "Your age is " << age << ".\n"; //displays name and endlines
   
 }
