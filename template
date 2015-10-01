@@ -1,0 +1,17 @@
+/* include a title description and be accurate
+Brian McMillan COSC-1436
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  define variables;
+  
+  program statements. end each line with a semicolon;
+  include comments;
+
+  //end your program with return 0; or 
+  system("pause");
+}
