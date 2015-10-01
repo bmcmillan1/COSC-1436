@@ -16,6 +16,6 @@ int main()
   cin >> age;
   
   cout << "Your name is " << firstName << " " << lastName << ".\n"; //displays first and last 
-  cout << "Your age is " << age << ".\n"; //displays age and endlines
+  cout << "Your age is " << age << ".\n"; //displays age and endlines with escape sequence
   
 }
