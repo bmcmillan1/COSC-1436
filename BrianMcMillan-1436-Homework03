@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char firstName, lastName
+  int age
+  
+  cout << "What is your first name?" << endl; //endline function
+  cin >> firstName; //user inputs their first name
+  
+  cout << "What is your last name?" << endl; 
+  cin >> lastName; //user inputs their last name
+  
+  cout << "What is your age?" << endl;
+  cin >> age;
+  
+  cout << "Your name is " << firstName << " " << lastName << ".\n"; //displays first and last and endlines
+  cout << "Your age is " << age << ".\n"; //displays name and endlines
+  
+}
