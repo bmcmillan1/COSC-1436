@@ -6,6 +6,7 @@ Program 5-8
 */
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main ()
@@ -14,7 +15,7 @@ int main ()
   const int ADULT_CHOICE = 1, CHILD_CHOICE = 2, SENIOR_CHOICE = 3, QUIT_CHOICE = 4;
   
   //constants for membership rates
-  const double ADULT = 40.0, CHILD = 20.0, SENIOR 30.0;
+  const double ADULT = 40.0, CHILD = 20.0, SENIOR = 30.0;
   
   //variables
   int choice; //menu choice
