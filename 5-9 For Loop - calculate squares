@@ -1,4 +1,4 @@
-/* displays numbers 1 - 10 and their squares.
+/* For Loop that calculates squares for numbers 1-10
 Brian McMillan
 COSC-1436
 Program 5-9
@@ -17,7 +17,7 @@ int main ()
   cout << "Number Number Squared\n";
   cout << "-----------------------\n";
   
-  for (num = MIN_NUMBER; num <= MAX_NUMBER; num++)
+  for (num = MIN_NUMBER; num <= MAX_NUMBER; num++) \\initilization expression, test exp, update exp
     cout << num << "\t\t" << (num * num) << endl;
     
   return 0;
