@@ -1,0 +1,16 @@
+/*Displays a menu, asks user to make a selection. 
+Do-loop, until selection 4 is made.
+Brian McMillan
+COSC-1436
+Program 5-8
+*/
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+
+
+
+}
