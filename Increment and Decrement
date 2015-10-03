@@ -1,0 +1,25 @@
+* Increment and decrement numbers
+Brian McMillan COSC-1436
+Program 5-1
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int Age;
+  
+  Age = 37;
+  cout << "My age is " << Age << ".\n"; 
+  
+  Age++;
+  cout <<  "Next year I will be " << Age << ".\n";
+  
+  Age--;
+  Age--;
+  cout << "Last year I was " << Age<< ".\n";
+  
+  //end your program with return 0; or 
+  return 0;
+}
