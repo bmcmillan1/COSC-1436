@@ -1,0 +1,20 @@
+/* use type cast to convert a number to a letter 
+ Brian McMillan COSC-1436 
+Program 3-10
+*/  
+ 
+#include <iostream> 
+using namespace std; 
+ 
+ 
+int main()
+{
+  int number = 65;
+  
+  cout << number << endl;
+  
+  cout << static_cast<char>(number) << endl;
+
+  //end your program with return 0; or 
+ return 0;
+}
