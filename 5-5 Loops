@@ -1,0 +1,60 @@
+/* Calculates something about soccer teams.
+Brian McMillan
+COSC-1436
+Program 5-5
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  //contants for min and max players;
+  const int MIN_players = 9;
+            MAX_players = 15;
+            
+  //variables
+  int players,
+      teamPlayers;
+      numTeams;
+      leftOver;
+      
+  //Get the number of players per team
+  cout << "How many players do you want per team? "; 
+  cin >> teamPlayers;
+  
+  //validate the input
+  while (teamPlayers <MIN_players || teamPlayers > MAX_players)
+  {
+    //explain the error
+    cout << "You should have at least " << MIN_players << but no more than " << MAX_players << " per team.\n";
+    
+    //get the input again
+     cout << "How many players do you want per team? "; 
+     cin >> teamPlayers;
+  }
+  
+  //Get the number of players available
+  cout << "How many players are available? "; 
+  cin >> players;
+  
+  //Validate the input
+  while (players <= 0)
+  {
+    //get the input again
+    cout << "Please enter 0 or greater: ";
+    cin >> players;
+  }
+  
+  //calculate the number of teams
+  numTeams = players / teamPlayers;
+  
+  //calculate the number of leftover players
+  leftOver = players % teamPlayers;
+  
+  //display the results
+  cout << "There will be " << numTeams << " teams with " << leftOver << " players left over.\n";
+  return 0;
+  
+}
