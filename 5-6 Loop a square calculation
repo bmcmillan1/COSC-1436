@@ -1,0 +1,28 @@
+/* Loop a square calculation
+Brian McMillan
+COSC-1436
+Program 5-6
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  const int Min_number = 1, //starting number to sqare
+            Max_number = 10; //maximum number to square
+            
+  int num = Min_number; //counter
+  
+  cout << "Number Number Squared\n";
+  cout << "------------------------\n";
+  
+  while (num <= Max_number)
+  {
+    cout << num << "\t\t" << (num * num) << endl;
+    num++; //increment the counter
+  }
+  
+  return 0;
+}
