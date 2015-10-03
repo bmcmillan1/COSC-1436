@@ -61,7 +61,7 @@ int main ()
           charges = months * CHILD;
           break;
         case SENIOR_CHOICE:
-          charges = monhts * SENIOR;
+          charges = months * SENIOR;
       }
       
       //display the month charges
@@ -70,8 +70,7 @@ int main ()
     }
   } while (choice != QUIT_CHOICE);
   
-return 0;
-}
+  return 0;
 
 
 }
