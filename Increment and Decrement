@@ -1,4 +1,4 @@
-* Increment and decrement numbers
+/* Increment and decrement numbers
 Brian McMillan COSC-1436
 Program 5-1
 */
@@ -8,18 +8,35 @@ using namespace std;
 
 int main()
 {
-  int Age;
+  int Age = 37;
+  int sonAge = 12;
   
-  Age = 37;
   cout << "My age is " << Age << ".\n"; 
   
+  //Postfix increments the number;
   Age++;
   cout <<  "Next year I will be " << Age << ".\n";
   
+  //Postfix decrements the number twice;
   Age--;
   Age--;
   cout << "Last year I was " << Age<< ".\n";
   
-  //end your program with return 0; or 
+  
+  /* Prefix vs Postfix Examples
+  You can use Age++ or ++Age, and Age-- or --Age.
+  Placing the operator before or after has an effect.
+  */
+  
+    cout << "My son's age is " << sonAge << ".\n"; 
+  
+  //Postfix increments the number;
+  cout <<  "Next year he will be " << ++sonAge << ".\n";
+  
+  //Postfix decrements the number twice;
+  cout << "Last year he was " << ----sonAge<< ".\n";
+  
   return 0;
+  
 }
+
