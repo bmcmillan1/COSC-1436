@@ -1,0 +1,20 @@
+/* While loop with Input Validation
+Brian McMillan COSC-1436
+Program 5-3
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int number;
+  
+  cout << "Enter a number in the range 1-100: ";
+  cin >> number;
+  
+  return 0;
+  
+}
+
+
