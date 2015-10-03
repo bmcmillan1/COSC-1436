@@ -30,10 +30,10 @@ int main()
   
     cout << "My son's age is " << sonAge << ".\n"; 
   
-  //Postfix increments the number;
+  //Prefix increments the number;
   cout <<  "Next year he will be " << ++sonAge << ".\n";
   
-  //Postfix decrements the number twice;
+  //Prefix decrements the number twice;
   cout << "Last year he was " << ----sonAge<< ".\n";
   
   return 0;
