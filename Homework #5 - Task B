@@ -14,7 +14,7 @@ int main()
   cout << "Guess a number between 1-10: ";
   cin >> guess;
   
-  while (number < 1 || number > 10) 
+  while (guess < 1 || guess > 10) 
   {
     cout << "Error: Enter a value between 1-10: ";
     cin >> guess;
