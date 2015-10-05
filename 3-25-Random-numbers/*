@@ -1,0 +1,29 @@
+/* Random number generator
+Brian McMillan
+COSC-1436
+Program 3-25
+*/
+
+#include <iostream>
+#include <cstdlib> //for rand and srand
+#include <ctime> //for the time function
+using namespace std;
+
+int main ()
+{
+  //get the system time
+  unsigned seed = time(0);
+  
+  //seed the random number generator
+  srand(seed);
+  
+  //display three random numbers
+  cout << rand() << endl; 
+  cout << rand() << endl;
+  cout << rand() << endl;
+  
+
+return 0;
+
+
+}
