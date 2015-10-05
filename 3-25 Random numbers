@@ -26,7 +26,9 @@ int main ()
   
   //display three random numbers
   vNumber = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
-  cout << "Your random number is " << vNumber << ".\n";
+  cout << "I have thought of a random number.\n";
+  cout << "I would like you to guess my number.\n";
+  cout << "It is a number between 1 and 10.\n";
 
 return 0;
 
