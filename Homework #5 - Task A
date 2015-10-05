@@ -1,0 +1,23 @@
+/* While loop with conditional end
+Brian McMillan COSC-1436
+Homework #05 - Task A
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int number = 0;
+  
+  while (number < 10)
+  {
+    cout << "I Love C++\n";
+    number++;
+  }
+  
+  cout << "I wish the program hadn't ended.  I really love programming!\n";
+  return 0;
+  
+}
