@@ -14,9 +14,10 @@ int main ()
   //constants
   const int MIN_VALUE = 1; 
   const int MAX_VALUE = 10; 
+  int GUESS;
   
   //variable number
-  int vNumber;
+  int vNUMBER;
   
   //get the system time
   unsigned seed = time(0);
@@ -24,12 +25,19 @@ int main ()
   //seed the random number generator
   srand(seed);
   
-  //display three random numbers
+  //determine a random and prompt for their guess
   vNumber = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
   cout << "I have thought of a random number.\n";
   cout << "I would like you to guess my number.\n";
   cout << "It is a number between 1 and 10.\n";
-
+  cin >> GUESS;
+  
+  //
+  if GUESS is < vNUMBER 
+    then cout << "Your number is less than my number." << endl;
+  if GUESS is > vNUMBER
+    then cout << "Your number is greater than my number." << endl;
+    
 return 0;
 
 
