@@ -11,6 +11,13 @@ using namespace std;
 
 int main ()
 {
+  //constants
+  const int MIN_VALUE = 1; 
+  const int MAX_VALUE = 10; 
+  
+  //variable number
+  int vNumber;
+  
   //get the system time
   unsigned seed = time(0);
   
@@ -18,10 +25,8 @@ int main ()
   srand(seed);
   
   //display three random numbers
-  cout << rand() << endl; 
-  cout << rand() << endl;
-  cout << rand() << endl;
-  
+  vNumber = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
+  cout << "Your random number is " << vNumber << ".\n";
 
 return 0;
 
