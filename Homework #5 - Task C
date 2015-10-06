@@ -5,13 +5,38 @@ Homework #5 - Task C
 */
 
 #include <iostream>
-#include <cstdlib> //for rand and srand
-#include <ctime> //for the time function
 using namespace std;
 
 int main ()
 {
-
+  //variables
+  string NAME;
+  int number1, number2, number3, number4, number5, number6, number7, number8, number9, number10;
+  double average;
+  
+  //ask for name
+  cout << "What is your name? " << endl;
+  cin >> NAME;
+  
+  //ask for numbers
+  cout << "Thank you, " << NAME << ". Please enter 10 numbers, between 1 and 100, and I will average them.\n";
+  cin >> number1
+  cin >> number2
+  cin >> number3
+  cin >> number4
+  cin >> number5
+  cin >> number6
+  cin >> number7
+  cin >> number8
+  cin >> number9
+  cout << "Just one more to go!" << endl;
+  cin >> number10
+  
+  //calculate and display the average
+  average = (number1 + number2 + number3 + number4 + number5 + number6 + number7 + number8 + number9 + number10) / 10.0;
+  cout << fixed < showpoint < setprecision(1);
+  cout << "The average of those 10 numbers is " average << endl;
+  
 
 return 0;
 }
