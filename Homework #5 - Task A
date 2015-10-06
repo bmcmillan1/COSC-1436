@@ -1,5 +1,6 @@
 /* While loop with conditional end
-Brian McMillan COSC-1436
+Brian McMillan 
+COSC-1436
 Homework #05 - Task A
 */
 
@@ -16,7 +17,7 @@ int main()
     cout << "I Love C++\n";
     number++;
   }
-  
+
   cout << "I wish the program hadn't ended.  I really love programming!\n";
   return 0;
   
