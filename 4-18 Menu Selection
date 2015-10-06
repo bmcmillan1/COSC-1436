@@ -60,7 +60,7 @@ int main ()
   
   else if (choice == QUIT_CHOICE)
   {
-    cout << Program ending.\n";
+    cout << "Program ending.\n";
   }
   
   else 
