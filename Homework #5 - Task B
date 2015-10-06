@@ -1,31 +1,44 @@
-/* While loop to guess a number
-Brian McMillan COSC-1436
-Homework #5 - Task B
+/* Random number generator
+Brian McMillan
+COSC-1436
+Program 3-25
 */
 
 #include <iostream>
+#include <cstdlib> //for rand and srand
+#include <ctime> //for the time function
 using namespace std;
 
-int main()
+int main ()
 {
-  int number = 7;
-  int guess;
+  //constants
+  const int MIN_VALUE = 1; 
+  const int MAX_VALUE = 10; 
+  int GUESS;
   
-  cout << "Guess a number between 1-10: ";
-  cin >> guess;
+  //variable number
+  int vNUMBER;
   
-  while (guess < 1 || guess > 10) 
-  {
-    cout << "Error: Enter a value between 1-10: ";
-    cin >> guess;
+  //get the system time
+  unsigned seed = time(0);
+  
+  //seed the random number generator
+  srand(seed);
+  
+  //determine a random and prompt for their guess
+  vNumber = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
+  cout << "I have thought of a random number.\n";
+  cout << "I would like you to guess my number.\n";
+  cout << "It is a number between 1 and 10.\n";
+  cin >> GUESS;
+  
+  //
+  if GUESS is < vNUMBER 
+    then cout << "Your number is less than my number." << endl;
+  if GUESS is > vNUMBER
+    then cout << "Your number is greater than my number." << endl;
     
-  }
-  
-  while (number == guess)
-  {
-        cout << "You guessed the correct number!";
-        
-  }
-  return 0;
-  
+return 0;
+
+
 }
