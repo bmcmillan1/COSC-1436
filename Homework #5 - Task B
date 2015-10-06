@@ -30,18 +30,20 @@ int main ()
   cout << "I have thought of a random number.\n";
   cout << "I would like you to guess my number.\n";
   cout << "It is a number between 1 and 10.\n";
-  cin >> GUESS;
+
   
+  do 
+  {
+    cout << "Enter your guess here: ";
+      cin >> GUESS;
+      
     if (GUESS < vNUMBER)
-
-        cout << "Your estimate is less, than the secret number" << endl;
-
+      cout << "Your guess was less than my number." << endl;
     else if (GUESS > vNUMBER)
-
-        cout << "Your estimate is more, than the secret number" << endl;
-
-    else
-
-        cout << "Your guess is right!" << endl;
-
+      cout << "Your guess was more than my number." << endl;
+    else 
+      cout << "Your guess is correct!" << endl;
+  } while (GUESS != vNUMBER);
+    
+return 0;
 }
