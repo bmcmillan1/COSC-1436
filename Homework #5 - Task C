@@ -21,27 +21,30 @@ int main ()
   cout << "What is your name? ";
   cin >> NAME;
   
-  //ask for numbers
-  cout << "Thank you, " << NAME << ". Please enter 10 numbers, between 1 and 100, and I will average them.\n";
-    for (int i = 0; i != TENNUMS; ++i)
+  //ask for numbers, add the inputs together, increment the for loop
+  cout << "Thank you, " << NAME << ". Please enter 10 numbers, between 0 and 100, and I will average them.\n";
+    for (int i = 0; i != TENNUMS; )
     {
         cout << "Enter a number: ";
         cin >> INPUT;
         
+        if (INPUT < 0 || INPUT > 100) //limit the span of the numbers
+        {
+          cout << "Error: Enter a value between 0-100: ";
+          cin >> INPUT;
+        }
+        
+        else 
         SUM += INPUT;
+        ++i;
+        
     }
     
     //calculate and display the average
     AVERAGE = SUM / TENNUMS;
-    cout << fixed << showpoint << setprecision(1);
+    //cout << fixed << showpoint << setprecision(1);
+    cout << NAME;
     cout << "The average of those 10 numbers is " << AVERAGE << endl;
-    
-  //limit the span of the numbers
-  while (INPUT < 1 || INPUT > 100) 
-    {
-    cout << "Error: Enter a value between 1-100: ";
-    cin >> INPUT;
-    }
     
 return 0;
 }
