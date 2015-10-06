@@ -28,10 +28,12 @@ int main ()
         cout << "Enter a number: ";
         cin >> INPUT;
         
-        if (INPUT < 0 || INPUT > 100) //limit the span of the numbers
+        //limit the span of the numbers
+        if (INPUT < 0 || INPUT > 100) 
         {
           cout << "Error: Enter a value between 0-100: ";
           cin >> INPUT;
+          SUM += INPUT;
         }
         
         else 
@@ -43,7 +45,7 @@ int main ()
     //calculate and display the average
     AVERAGE = SUM / TENNUMS;
     //cout << fixed << showpoint << setprecision(1);
-    cout << NAME;
+    cout << NAME << endl;
     cout << "The average of those 10 numbers is " << AVERAGE << endl;
     
 return 0;
