@@ -26,19 +26,22 @@ int main ()
   srand(seed);
   
   //determine a random and prompt for their guess
-  vNumber = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
+  vNUMBER = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
   cout << "I have thought of a random number.\n";
   cout << "I would like you to guess my number.\n";
   cout << "It is a number between 1 and 10.\n";
   cin >> GUESS;
   
-  //
-  if GUESS is < vNUMBER 
-    then cout << "Your number is less than my number." << endl;
-  if GUESS is > vNUMBER
-    then cout << "Your number is greater than my number." << endl;
-    
-return 0;
+    if (GUESS < vNUMBER)
 
+        cout << "Your estimate is less, than the secret number" << endl;
+
+    else if (GUESS > vNUMBER)
+
+        cout << "Your estimate is more, than the secret number" << endl;
+
+    else
+
+        cout << "Your guess is right!" << endl;
 
 }
