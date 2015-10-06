@@ -1,0 +1,54 @@
+/* Displays a menu, make a selection.
+If/Else statements to determine which item was chosen.
+Brian McMillan
+COSC-1436
+Program 4-18
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+  int choice; // hold a menu choice
+  int months; // hold number of months
+  double charges; // hold monthly charges
+  
+  //constants for membership rates
+  const double ADULT = 40.0, SENIOR = 30.0, CHILD = 20.0;
+  
+  //constants for menu choices
+  const int ADULT_CHOICE = 1, CHILD_CHOICE = 2, SENIOR_CHOICE = 3, QUIT_CHOICE = 4;
+  
+  //display the menu and get a choice
+  cout << "\t\tHealth Club Membership Menu\n\n"
+      << "1. Standard Adult Membership\n"
+      << "2. Child Membership\n"
+      << "3. Senior Citizen Membership\n"
+      << "4. Quit the Program\n\n"
+      << "Enter your choice: ";
+  cin >> choice;
+  
+  //set the numeric output formatting
+  cout << fixed << showpoint << setprecision(2);
+  
+  //respond to the user's menu selection
+  if (choice == ADULT_CHOICE)
+  {
+    cout << "For how many months? ";
+    cin >> months;
+    charges = months * ADULT;
+    cout << "The total charges are $" << charges << endl;
+  }
+  
+  else if (choice == CHILD_CHOICE)
+    cout << "For how many months? ";
+    cin >> months;
+    charges = months * CHILD;
+    cout << "The total charges are $" << charges << endl;
+
+
+
+return 0;
+}
