@@ -43,12 +43,31 @@ int main ()
   }
   
   else if (choice == CHILD_CHOICE)
+  {
     cout << "For how many months? ";
     cin >> months;
     charges = months * CHILD;
     cout << "The total charges are $" << charges << endl;
-
-
-
-return 0;
+  }
+    
+  else if (choice == SENIOR_CHOICE)
+  {
+    cout << "For how many months? ";
+    cin >> months;
+    charges = months * SENIOR;
+    cout << "The total charges are $" << charges << endl;
+  }
+  
+  else if (choice == QUIT_CHOICE)
+  {
+    cout << Program ending.\n";
+  }
+  
+  else 
+  {
+    cout << "The valid choices are 1 through 4. Run the\n"
+        << "program again and select one of those.\n";
+  }
+  
+  return 0;
 }
