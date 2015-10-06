@@ -1,12 +1,91 @@
-/*
-
+/* Displays a menu, make a selection.
+If/Else statements to determine which item was chosen and price.
+Brian McMillan
+COSC-1436
+Homework #5 - Task D
 */
 
 #include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main ()
 {
-
-
-return 0;
+  int choice; // hold catering package choice
+  int people; // hold number of people
+  double charges; // hold package * # of people
+  
+  //constants for membership rates
+  const double xLarge = 25.0, Large = 20.0, Medium = 15.0, Small = 10.0, xSmall = 5.0;
+  
+  //constants for menu choices
+  const int XLARGE = 1, LARGE = 2, MEDIUM = 3, SMALL = 4, XSMALL = 5, EXIT_ORDER = 6;
+  
+  //display the menu and get a choice
+  cout << "\t\tBBQ Catering Packages\n\n"
+      << "1. Extra Large\n"
+      << "2. Large\n"
+      << "3. Medium\n"
+      << "4. Small\n"
+      << "5. Extra Small\n"
+      << "6. Exit Order\n\n"
+      << "Enter your choice: ";
+  cin >> choice;
+  
+  //set the numeric output formatting
+  cout << fixed << showpoint << setprecision(2);
+  
+  //respond to the user's menu selection
+  if (choice == XLARGE)
+  {
+    cout << "For how many people? ";
+    cin >> people;
+    charges = people * xLarge;
+    cout << "The total package cost is $" << charges << endl;
+  }
+  
+  else if (choice == LARGE)
+  {
+    cout << "For how many people? ";
+    cin >> people;
+    charges = people * Large;
+    cout << "The total package cost is $" << charges << endl;
+  }
+    
+  else if (choice == MEDIUM)
+  {
+    cout << "For how many people? ";
+    cin >> people;
+    charges = people * Medium;
+    cout << "The total package cost is $" << charges << endl;
+  }
+  
+  else if (choice == SMALL)
+  {
+    cout << "For how many people? ";
+    cin >> people;
+    charges = people * Small;
+    cout << "The total package cost is $" << charges << endl;
+  }
+  
+  else if (choice == XSMALL)
+  {
+    cout << "For how many people? ";
+    cin >> people;
+    charges = people * xSmall;
+    cout << "The total package cost is $" << charges << endl;
+  }
+  
+  else if (choice == EXIT_ORDER)
+  {
+    cout << "Exiting Order.\n";
+  }
+  
+  else 
+  {
+    cout << "The valid choices are 1 through 5. Run the\n"
+        << "program again and select one of those.\n";
+  }
+  
+  return 0;
 }
