@@ -13,7 +13,7 @@ int main ()
 {
   //constants
   const int MIN_VALUE = 1; 
-  const int MAX_VALUE = 10; 
+  const int MAX_VALUE = 100; 
   int GUESS;
   
   //variable number
@@ -26,17 +26,14 @@ int main ()
   srand(seed);
   
   //determine a random and prompt for their guess
-  vNumber = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
-  cout << "I have thought of a random number.\n";
-  cout << "I would like you to guess my number.\n";
-  cout << "It is a number between 1 and 10.\n";
-  cin >> GUESS;
-  
-  //
-  if GUESS is < vNUMBER 
-    then cout << "Your number is less than my number." << endl;
-  if GUESS is > vNUMBER
-    then cout << "Your number is greater than my number." << endl;
+  vNUMBER = (rand() % (MAX_VALUE - MIN_VALUE +1)) + MIN_VALUE;
+  cout << "Here are three random numbers.\n";
+  cout << rand() << endl;
+  cout << rand() << endl;
+  cout << rand() << endl;
+  cout << "Here is a number between 1 - 100.\n";
+  cout << vNUMBER << endl;
+
     
 return 0;
 
