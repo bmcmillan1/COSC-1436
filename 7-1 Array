@@ -12,12 +12,12 @@ int main ()
   
   //get hours worked by each employee
   cout << "Enter the hours work by " << NUM_EMPLOYEES << " employees: ";
-  cin>> hours[0];
-  cin>> hours[1];
-  cin>> hours[2];
-  cin>> hours[3];
-  cin>> hours[4];
-  cin>> hours[5];
+  cin >> hours[0];
+  cin >> hours[1];
+  cin >> hours[2];
+  cin >> hours[3];
+  cin >> hours[4];
+  cin >> hours[5];
   
   //display the values in the array
   cout << "The hours you entered are:";
