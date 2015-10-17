@@ -7,17 +7,33 @@ no negative values allowed
 Brian McMillan
 */
 
-#inlcude <iostream>
+#include <iostream>
 using namespace std;
 
 int main()
 {
 
   //variables
+  double COST, MARKUP, PRICE;
   
   //functions
+  void calculateRetail ()
   
   
-
+  //program
+  cout << "Enter the retail cost of the item: ";
+  cin >> COST >> endl;
+  cout << "Enter the markup percentage as a decimal value: ";
+  cin >> MARKUP >> endl;
+  calculateRetail();
+  
+  //function definitions
+  void calculateRetail()
+  {
+    //calculate the retain price using input variables
+    COST / MARKUP = PRICE;
+  }
+  
+  
 return 0;
 }
