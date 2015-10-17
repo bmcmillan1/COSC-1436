@@ -17,7 +17,7 @@ int main()
   double COST, MARKUP, PRICE;
   
   //functions
-  void calculateRetail ()
+  void calculateRetail(double, double, double);
   
   
   //program
@@ -25,13 +25,13 @@ int main()
   cin >> COST >> endl;
   cout << "Enter the markup percentage as a decimal value: ";
   cin >> MARKUP >> endl;
-  calculateRetail();
+  cout << calculateRetail() << endl;
   
   //function definitions
-  void calculateRetail()
+  void calculateRetail(double, double, double)
   {
     //calculate the retain price using input variables
-    COST / MARKUP = PRICE;
+    cout << (COST / MARKUP = PRICE) << endl;
   }
   
   
