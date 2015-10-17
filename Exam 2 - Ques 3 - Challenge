@@ -1,0 +1,23 @@
+/* Chapter 6, Programming Challenge #1, page 366
+enter wholesale cost + markup percentages
+then display retail price.
+Example: cost is 5.00, markup is 100%, retail price is 10.00
+must use function called calculateRetail
+no negative values allowed
+Brian McMillan
+*/
+
+#inlcude <iostream>
+using namespace std;
+
+int main()
+{
+
+  //variables
+  
+  //functions
+  
+  
+
+return 0;
+}
