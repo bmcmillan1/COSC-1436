@@ -1,0 +1,29 @@
+// Quiz #2 part 2 - Brian McMillan
+// COSC 1436
+#include <iostream>
+using namespace std;
+
+//this doesn't run correctly
+
+int main()
+{
+    int set[10] = {7, 2, 3, 9, 5, 8, 1, 4, 6, 0};
+    int *nums = set; 
+
+    cout << "The numers in set are:\n";
+    cout << *nums << " ";
+    while (nums < &set[9]);
+    {
+        nums++;
+        cout << *nums << " ";
+    }
+    
+    cout << "\nThe numbers in set backward are:\n";
+    cout << *nums << " "; 
+    while (nums > set);
+    {
+        nums--;
+        cout << *nums << " ";
+    }
+    return 0;
+}
