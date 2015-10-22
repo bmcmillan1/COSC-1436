@@ -1,0 +1,21 @@
+/* displays the days in each month
+Program 7-6
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+  const int months = 12;
+  int days[months] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  
+  for (int count = 0; count < months; count++)
+  {
+    cout << "Month " << (count + 1) << " has ";
+    cout << days[count] << " days.\n";
+  }
+  
+return 0;
+}
