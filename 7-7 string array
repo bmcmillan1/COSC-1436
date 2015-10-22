@@ -1,0 +1,19 @@
+// list the planet names
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+  const int size = 9;
+  string planets[size] = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto (a dwarf planet)" };
+  
+  cout << "Here are the planets:\n";
+  
+  for (int count = 0; count < size; count++)
+    cout << planets[count] << endl;
+    
+    
+return 0;
+}
