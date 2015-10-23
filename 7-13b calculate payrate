@@ -1,0 +1,42 @@
+/* demonstrates the range-based loop
+Program 7-10
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  const int NUM_EMPLOYEES = 5;
+  int hours[NUM_EMPLOYEES];
+  double payrate;
+  double grossPay;
+  
+  //input hours worked
+  cout << "Enter the payrate of \n";
+  cout << NUM_EMPLOYEES << " employees \n";
+  
+  for (int index = 0; index < NUM_EMPLOYEES; index++)
+  {
+    cout << "Employee #" << (index + 1) << ": ";
+    cin >> payrate[index];
+  }
+  
+  //input hourly rate for employees
+  cout << "Enter the hours they worked: ";
+  cin >> hours;
+  
+  //display the gross pay
+  cout << "Here is the gross pay for each employee:\n";
+  cout << fixed << showpoint << setprecision(2);
+  for (int index = 0; index < NUM_EMPLOYEES; index++)
+  {
+    grossPay = hours[index] * payrate;
+    cout << "Employee #" << (index + 1);
+    cout << ": $" << grossPay << endl;
+    
+  }
+  
+return 0;
+}
