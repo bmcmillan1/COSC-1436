@@ -1,0 +1,22 @@
+/* stores characters of letters and displays their ASCII values
+Program 7-8
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  const int NUM_LETTERS = 4;
+  char letters[NUM_LETTERS] = {'A', 'B', 'C', 'D'};
+  
+  cout << "Character" << "\t" << "ASCII Code\n";
+  cout << "---------" << "\t" << "----------\n";
+  for (int count = 0; count < NUM_LETTERS; count++)
+  {
+    cout << letters[count] << "\t\t";
+    cout << static_cast<int>(letters[count]) << endl;
+  }
+  
+return 0;
+}
