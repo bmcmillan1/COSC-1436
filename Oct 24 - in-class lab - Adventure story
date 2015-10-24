@@ -15,41 +15,53 @@ using std::string;
 int main()
 {
 	const int ENCRYPTEDFILES = 1532908;
-	int USERS, CLICKERS, survivors;
+	int USERS, CLICKERS, GOODPEOPLE;
 	string TECH;
 
 	//get the information
 	cout << "Welcome to the story of CryptoLocker\n\n";
-	cout << "Please enter the following for your personalized adventure\n";
+	cout << "Please enter the following for your personalized story\n";
 
 	cout << "Enter a number: "; 
-	cin >> adventurers;
+	cin >> USERS;
 
 	cout << "Enter a number, smaller than the first: ";
-	cin >> killed;
+	cin >> CLICKERS;
 
-	survivors = USERS - CLICKERS;
+	GOODPEOPLE = USERS - CLICKERS;
 
 	cout << "Enter your last name: ";
-	cin >> leader >> endl;
+	cin >> TECH >> endl;
 
 	//tell the story
 	cout << "The finance company had " << USERS << " users that received a strage email.\n";
 	cout << "It was a notice from Mark Zuckerberg \n";
 	cout << "and he was inviting the user to try out the new Dislike button.\n";
+	cout << "They just had to click a link to be added to the beta users group.\n";
 
-	cout << "Along the way, a band of marauding ogres ambushed the party. ";
-	cout << "All fought bravely under the command of " << leader;
-	cout << ", and the ogres were defeated, but at a cost. ";
-	cout << "Of the adventurers, " << killed << " were vanquished, ";
-	cout << "leaving just " << survivors << " in the group.\n";
+	cout << "Several users immeditaley recognized the email as a phishing email for several reasons.\n";
+	cout << "1) The do not have their facebook registered to their work email address\n";
+	cout << "2) The link had a URL that was not facebook.com\n";
+	cout << "3) The from address was mark.zuckerberg@facebook.net\n";
+	endl;
+	endl; 
+	cout << CLICKERS << " other users were excited to see the new Dislike button\n";
+	cout << "and made the mistake of clicking that link.\n";
+	cout << "After the bogus webpage loaded, a whole-screen pop-up appeared.\n";
+	cout << "The message stated that all their files had been encrypted and\n";
+	cout << "demaned a ransom of $500 worth of bitcoin in order to recover their files.\n";
+	cout << "The message went on to provid detailed instructions to purchase bitcoin\n";
+	cout << "and how to upload them to the hackers.\n";
 
-	cout << "\nThe party was about to give up all hope. "; 
-	cout << "But while laying the deceased to rest, ";
-	cout << "they stumbled upon the buried fortune. ";
-	cout << "So the adventurers split " << GOLD_PIECES << " gold pieces.";
-	cout << leader << " held on to the extra " << (GOLD_PIECES % survivors);
-	cout << " pieces to keep things fair of course.\n";
-
+	cout << "If the IT technician, " << TECH << "knew about this, he would have\n"; 
+	cout << "instructed them to immediately shutdown their PC.\n";
+	cout << "Instead, the users stared at the message, wondering what to do...\n";
+	cout << "...who should they call...should they hide under their desk.. ...or go on an extended lunch break.\n";
+	cout << "By the time " << TECH << " found out about the problem \n";
+	cout << ENCRYPTEDFILES << " files on the server had been encrypted.\n";
+	cout << TECH << " was notified about 1 hour after the incident.\n" 
+	cout << "It tooks a few hours to recover from backups.\n";
+	cout << "And mandatory training began the next day covering how to spot phishing emails.\n";
+	
 	return 0;
 }
