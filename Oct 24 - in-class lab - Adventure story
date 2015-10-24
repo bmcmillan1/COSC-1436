@@ -63,7 +63,7 @@ int main()
 	cout << endl;
 	cout << endl; 
 	
-	cout << "If the IT technician, " << TECH << "knew about this, he would have\n"; 
+	cout << "If the IT technician, " << TECH << ", knew about this, he would have\n"; 
 	cout << "instructed them to immediately remove the power to their PC.\n";
 	cout << "Instead, the users stared at the message, wondering what to do...\n";
 	cout << "...who should they call...should they hide under their desk..\n";
