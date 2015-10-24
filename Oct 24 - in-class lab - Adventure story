@@ -31,35 +31,49 @@ int main()
 	GOODPEOPLE = USERS - CLICKERS;
 
 	cout << "Enter your last name: ";
-	cin >> TECH >> endl;
-
+	cin >> TECH;
+	cout << endl;
+	cout << endl; 
+	
 	//tell the story
 	cout << "The finance company had " << USERS << " users that received a strage email.\n";
 	cout << "It was a notice from Mark Zuckerberg \n";
 	cout << "and he was inviting the user to try out the new Dislike button.\n";
-	cout << "They just had to click a link to be added to the beta users group.\n";
-
-	cout << "Several users immeditaley recognized the email as a phishing email for several reasons.\n";
+	cout << "The email instructed them to click a link in order to be added to the beta users group.\n";
+	cout << endl;
+	cout << endl; 
+	
+	cout << "Several users immeditaley recognized three items that indicated this was a phishing email.\n";
 	cout << "1) The do not have their facebook registered to their work email address\n";
 	cout << "2) The link had a URL that was not facebook.com\n";
 	cout << "3) The from address was mark.zuckerberg@facebook.net\n";
-	endl;
-	endl; 
+	cout << endl;
+	cout << endl; 
+	
 	cout << CLICKERS << " other users were excited to see the new Dislike button\n";
 	cout << "and made the mistake of clicking that link.\n";
+	cout << endl;
+	cout << endl; 
+	
 	cout << "After the bogus webpage loaded, a whole-screen pop-up appeared.\n";
 	cout << "The message stated that all their files had been encrypted and\n";
 	cout << "demaned a ransom of $500 worth of bitcoin in order to recover their files.\n";
 	cout << "The message went on to provid detailed instructions to purchase bitcoin\n";
 	cout << "and how to upload them to the hackers.\n";
-
+	cout << endl;
+	cout << endl; 
+	
 	cout << "If the IT technician, " << TECH << "knew about this, he would have\n"; 
-	cout << "instructed them to immediately shutdown their PC.\n";
+	cout << "instructed them to immediately remove the power to their PC.\n";
 	cout << "Instead, the users stared at the message, wondering what to do...\n";
-	cout << "...who should they call...should they hide under their desk.. ...or go on an extended lunch break.\n";
+	cout << "...who should they call...should they hide under their desk..\n";
+	cout << "...or go on an extended lunch break.\n";
+	cout << endl;
+	cout << endl; 
+	
 	cout << "By the time " << TECH << " found out about the problem \n";
 	cout << ENCRYPTEDFILES << " files on the server had been encrypted.\n";
-	cout << TECH << " was notified about 1 hour after the incident.\n" 
+	cout << TECH << " was notified about 1 hour after the incident.\n";
 	cout << "It tooks a few hours to recover from backups.\n";
 	cout << "And mandatory training began the next day covering how to spot phishing emails.\n";
 	
