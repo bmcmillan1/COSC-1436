@@ -34,3 +34,28 @@ int main()
   
 return 0;
 }
+
+/*
+the searchList function performs a linear search on an integer array. the array list,
+which has a max of numElems elements, is searched for the number stored in value. If the number is
+found, its array subscript is returned. otherwise, -1 is returned indicating
+the value was not in the array.
+*/
+
+int searchList(const int list[], int numElems, int value)
+{
+  int index = 0;      //use as a subscript to search array
+  int position = -1;  //to record position of search value
+  bool found = false; //flag to indicate if the value was found
+  
+  while (index < numElems && !found)
+  {
+    if (list[index] == value)  //if the value is found
+    {
+      found = true;            //set flag
+      position = index;        //record teh value's subscript
+    }
+    index++;                   // go to the next element
+  }
+  return position;             //return the position, or -1
+}
