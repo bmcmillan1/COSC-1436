@@ -1,0 +1,86 @@
+/*Doesn't calculate scores and kill monster
+http://www.cplusplus.com/forum/beginner/99203/#msg534078
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void ShowMenu(); 
+
+double playerHealth = 100, enemyHealth = 100;
+
+/* Main function
+*/
+
+int main()
+{
+	
+	
+
+bool Quit = false;
+char move = 'z';
+
+while(!Quit) {
+      if(playerHealth == 0) {
+			cout << "You died. Game Over.\n";
+			return 0;
+      }
+      if (enemyHealth == 0) {
+             //your code here
+      }
+
+     ShowMenu();
+     cin >> move;
+
+     switch (move) {
+            case '1':
+				cout << "You swung your sword at your enemy.\n";
+				cout << "Your enemy takes 20 damage!\n";
+				enemyHealth -= 20;
+                break;
+
+            case '2':
+                cout << "You swung your sword at your enemy.\n";
+				cout << "Your enemy takes 20 damage!\n";
+				enemyHealth -= 18;
+                 break;
+
+            case '3':
+                cout << "You dodged your enemy's attack.\n";
+				cout << "Your enemy cunningly cut your side and you took 20 damage and began bleeding\n";
+				playerHealth -= 20;
+				playerHealth = --playerHealth;
+                 break;
+
+            case '4':
+                cout << "You kicked your enemy.\n";
+				cout << "Your enemy stumbles back but takes no damage.\n";
+                 break;
+
+            case '5': //user wants to quit
+                 Quit = true;  //execution continues after the switch
+                  //or do this to end program
+                 //return 0;
+                 break;
+
+            default:
+                  std::cout << "Bad Input, Try again " << std::endl;
+                  break;
+     }
+
+}
+
+return 0;
+} //end of main
+
+void ShowMenu() {
+		cout << "What's your move?\n";
+		cout << "1 - Swing Sword\n";
+		cout << "2 - Stab with Sword\n";
+		cout << "3 - Dodge enemy attack\n";
+		cout << "4 - Kick enemy\n";
+        cout << "5 - Quit\n\n";
+		cout << "Your move: " << endl; //flush buffer with endl occasionally
+
+}
