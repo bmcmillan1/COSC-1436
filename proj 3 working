@@ -17,10 +17,11 @@ int showMenu();
 //DECLARE VARIABLES
 bool done;
 int pizzaNum, sideNum, drinkNum;
-string divider = "~~~~~~~~~~~~~~~~";
-double pizzaPrice = 11.99, sidePrice = 4.99, drinkPrice = 1.99, salesTax = 0.06, total;
+string divider = "~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+double pizzaPrice = 15.95, sidePrice = 6.95, drinkPrice = 1.55, salesTax = 0.0825, total;
 int pizza, side, drink, choice;
 // double calculateTotal;
+string customerName;
 
 
 
@@ -28,6 +29,10 @@ int pizza, side, drink, choice;
 //BEGIN MAIN 
 int main()
 {
+    cout << "Please enter your name: ";
+    cin >> customerName; 
+
+    
     showMenu();
 
     cout << "PRICE SUMMARY";
@@ -87,10 +92,10 @@ int showMenu()
 
     do 
     {
-        cout << "\n\nTakeout Menu"
-            << "\n\n1) Order pizza ($11.99ea)"
-            << "\n2) Order side items ($4.99ea)"
-            << "\n3) Order drinks ($1.99ea)"
+        cout << "\n\nWelcome to NYC Pizza, " << customerName << "!"
+            << "\n\n1) Order pizza ($15.95ea)"
+            << "\n2) Order side items ($6.95ea)"
+            << "\n3) Order drinks ($1.55ea)"
             << "\n4) Exit menu and display bill";
 
         cout << "\n\nEnter your choice (1-4): ";
