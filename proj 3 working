@@ -1,4 +1,13 @@
 //Source: http://codereview.stackexchange.com/questions/66974/simple-takeout-menu
+/*
+If you enter a name with a space it goes into an infinite loop. 
+Example: FIRST LAST 
+
+The tabulation of multiple items isn't working correctly.
+If you select that you want 1 pizza, then select 2 additional pizzas, it will show a 
+total of 2 pizzas, then show a grand total of 3 items. And the total price is based 
+only on the 2 pizzas. This happens for each category.
+*/
 
 #include <iostream>
 #include <string>
@@ -20,7 +29,7 @@ int pizzaNum, sideNum, drinkNum;
 string divider = "~~~~~~~~~~~~~~~~~~~~~~~~~~~";
 double pizzaPrice = 15.95, sidePrice = 6.95, drinkPrice = 1.55, salesTax = 0.0825, total;
 int pizza, side, drink, choice;
-// double calculateTotal;
+// double calculateTotal;  //not needed
 string customerName;
 
 
