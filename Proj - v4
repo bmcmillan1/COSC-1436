@@ -1,15 +1,15 @@
 //Source: http://codereview.stackexchange.com/questions/66974/simple-takeout-menu
 /*
-1) If you enter a name with a space it goes into an infinite loop. 
-Example: FIRST LAST 
+1) If you enter a name with a space it goes into an infinite loop.
+Example: FIRST LAST
 Fixed with getline(cin, customerName);
 
 2) The tabulation of multiple items isn't working correctly.
-If you select that you want 1 pizza, then select 2 additional pizzas, it will show a 
-total of 2 pizzas, then show a grand total of 3 items. And the total price is based 
-on 2 pizzas. 
+If you select that you want 1 pizza, then select 2 additional pizzas, it will show a
+total of 2 pizzas, then show a grand total of 3 items. And the total price is based
+on 2 pizzas.
 
-3) inside SideOrder function, there's a warning about a non-void function. moving the 
+3) inside SideOrder function, there's a warning about a non-void function. moving the
 "return sideNum;" down one bracket, causes the function to stop working.
 */
 
@@ -52,7 +52,7 @@ int main()
 
     cout << "\n\n" << bill << "\n\n";
 
-    cout << "PRICE SUMMARY";
+    cout << "Thank you " << customerName << ", here is your total order:\n";
 
     pizzaPrice = pizzaPrice * pizzaNum;
     sidePrice = sidePrice * sideNum;
