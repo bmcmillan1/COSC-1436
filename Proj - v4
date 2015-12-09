@@ -1,16 +1,13 @@
 //Source: http://codereview.stackexchange.com/questions/66974/simple-takeout-menu
 /*
-1) If you enter a name with a space it goes into an infinite loop.
-Example: FIRST LAST
-Fixed with getline(cin, customerName);
+1) Order Summary output is missing
 
-2) missing the output "Order Summary"
+2) The tabulation of multiple items isn't working correctly.
+If you select that you want 1 pizza, then select 2 additional pizzas, it will show an
+Order Summary of 2 pizzas, then show a grand total of 3 items. And the total price is based
+only on 2 pizzas.
 
-3) The tabulation of multiple items isn't working correctly.
-If you select that you want 1 pizza, then select 2 additional pizzas, it will show an Order Summary 
-of 2 pizzas, then show a grand total of 3 items. And the total price is based only on 2 pizzas.
-
-4) inside SideOrder function, there's a warning about a non-void function. moving the
+3) inside SideOrder function, there's a warning about a non-void function. moving the
 "return sideNum;" down one bracket, causes the function to stop working.
 */
 
@@ -33,7 +30,7 @@ int showMenu();
 bool done;
 int pizzaNum, sideNum, drinkNum;
 string divider = "~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-string bill = "$$$$$$$$$$$$$$$$$$$$$$";
+string bill = " $$$$$$$$$$$$$$$$$$$$$$";
 double pizzaPrice = 15.95, sidePrice = 6.95, drinkPrice = 1.55, salesTax = 0.0825, total;
 int pizza, side, drink, choice;
 //double calculateTotal;
@@ -45,7 +42,7 @@ string customerName;
 //BEGIN MAIN
 int main()
 {
-    cout << "Please enter your full name: ";
+    cout << " Please enter your full name: ";
     getline(cin, customerName);  //allows a space in the string
 
 
@@ -53,7 +50,7 @@ int main()
 
     cout << "\n\n" << bill << "\n\n";
 
-    cout << "Thank you " << customerName << ", here is your total order:\n";
+    cout << " Thank you, " << customerName << ".\n Here is your total order:\n";
 
     pizzaPrice = pizzaPrice * pizzaNum;
     sidePrice = sidePrice * sideNum;
@@ -61,31 +58,31 @@ int main()
     total = (pizzaPrice + sidePrice + drinkPrice);
     salesTax = total * salesTax;
 
-    cout << "\n\nPrice of items: $" << setprecision(2) << fixed << total;
+    cout << "\n\n Price of items: $" << setprecision(2) << fixed << total;
     total = total + salesTax;
 
-    cout << "\nTax of items: $" << setprecision(2) << fixed << salesTax;
+    cout << "\n Tax of items: $" << setprecision(2) << fixed << salesTax;
     if (total > 100)
         {
-        cout << "\n-------------------"
-            << "\nTotal price: $" << setprecision(2) << fixed << total << "\n"
-            << "-------------------\n\n";
+        cout << "\n -------------------"
+            << "\n Total price: $" << setprecision(2) << fixed << total << "\n"
+            << " -------------------\n\n";
 
         }
 
     else if (total > 10 && total < 100)
         {
-        cout << "\n-------------------"
-            << "\nTotal price: $" << setprecision(2) << fixed << total << "\n"
-            << "-------------------\n\n";
+        cout << "\n -------------------"
+            << "\n Total price: $" << setprecision(2) << fixed << total << "\n"
+            << " -------------------\n\n";
 
         }
 
     else if (total < 10)
         {
-        cout << "\n-------------------"
-            << "\nTotal price: $" << setprecision(2) << fixed << total << "\n"
-            << "-------------------\n\n";
+        cout << "\n -------------------"
+            << "\n Total price: $" << setprecision(2) << fixed << total << "\n"
+            << " -------------------\n\n";
 
         }
     cout << bill << "\n\n";
