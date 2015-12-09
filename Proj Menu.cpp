@@ -158,7 +158,7 @@ int showMenu()
     }while(!done);
 
     if (choice == 4){
-        cout << "\n\nORDER SUMMARY\n";
+        cout << "\n\n ORDER SUMMARY\n";
     }
 
     if (pizzaNum != 1){
@@ -205,7 +205,7 @@ int PizzaOrder()
         << "\n3) Supreme"
         << "\n4) Vegetarian";
 
-    cout << "\n\nWhich type of pizza? ";
+    cout << "\n\n Which type of pizza? ";
     cin >> pizzaChoice;
 
     while(!done){
@@ -215,7 +215,7 @@ int PizzaOrder()
             case 1:
                 {
 
-                    cout << "\nHow many pepperoni pizzas? ";
+                    cout << "\n How many pepperoni pizzas? ";
                     cin >> pizzaNum;
                     cout << "\n" << divider;
                     done = true;
@@ -223,7 +223,7 @@ int PizzaOrder()
                 }
             case 2:
                 {
-                    cout << "\nHow many cheese pizzas? ";
+                    cout << "\n How many cheese pizzas? ";
                     cin >> pizzaNum;
                     cout << "\n" << divider;
                     done = true;
@@ -231,7 +231,7 @@ int PizzaOrder()
                 }
             case 3:
                 {
-                    cout << "\nHow many supreme pizzas? ";
+                    cout << "\n How many supreme pizzas? ";
                     cin >> pizzaNum;
                     cout << "\n" << divider;
                     done = true;
@@ -239,7 +239,7 @@ int PizzaOrder()
                 }
             case 4:
                 {
-                    cout << "\nHow many vegetarian pizzas? ";
+                    cout << "\n How many vegetarian pizzas? ";
                     cin >> pizzaNum;
                     cout << "\n" << divider;
                     done = true;
@@ -269,7 +269,7 @@ int SideOrder()
         << "\n2) Fries (medium)"
         << "\n3) Salad (medium bowl)"
         << "\n4) Breadsticks (4)";
-    cout << "\n\nWhich type of side? ";
+    cout << "\n\n Which type of side? ";
     cin >> sideChoice;
 
     while(!done)
