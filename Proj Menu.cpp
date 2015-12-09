@@ -28,7 +28,7 @@ int showMenu();
 
 //DECLARE VARIABLES
 bool done;
-int pizzaNum, sideNum, drinkNum;
+int totalPizzaNum, totalSideNum, totalDrinkNum;
 string divider = "~~~~~~~~~~~~~~~~~~~~~~~~~~~";
 string bill = " $$$$$$$$$$$$$$$$$$$$$$";
 double pizzaPrice = 15.95, sidePrice = 6.95, drinkPrice = 1.55, salesTax = 0.0825, total;
@@ -52,9 +52,9 @@ int main()
 
     cout << " Thank you, " << customerName << ".\n Here is your total order:\n";
 
-    pizzaPrice = pizzaPrice * pizzaNum;
-    sidePrice = sidePrice * sideNum;
-    drinkPrice = drinkPrice * drinkNum;
+    pizzaPrice = pizzaPrice * totalPizzaNum;
+    sidePrice = sidePrice * totalSideNum;
+    drinkPrice = drinkPrice * totalDrinkNum;
     total = (pizzaPrice + sidePrice + drinkPrice);
     salesTax = total * salesTax;
 
@@ -124,28 +124,28 @@ int showMenu()
         {
             case 1:
                 {
-                    pizzaNum = PizzaOrder();
-                    calculateTotal += pizzaNum;
+                    totalPizzaNum += PizzaOrder();
+                    //calculateTotal += pizzaNum;
                     break;
                 }
 
             case 2:
                 {
-                    sideNum = SideOrder();
-                    calculateTotal += sideNum;
+                    totalSideNum += SideOrder();
+                    //calculateTotal += sideNum;
                     break;
                 }
 
             case 3:
                 {
-                    drinkNum = DrinksOrder();
-                    calculateTotal += drinkNum;
+                    totalDrinkNum += DrinksOrder();
+                    //calculateTotal += drinkNum;
                     break;
                 }
 
             case 4:
                 {
-                    calculateTotal = ( pizzaNum + sideNum + drinkNum );
+                    calculateTotal = ( totalPizzaNum + totalSideNum + totalDrinkNum );
                     done = true;  //Set true, exit while loop
                     break;
                 }
@@ -161,28 +161,28 @@ int showMenu()
         cout << "\n\n ORDER SUMMARY\n";
     }
 
-    if (pizzaNum != 1){
-        cout << "\n" << pizzaNum << " pizzas";
+    if (totalPizzaNum != 1){
+        cout << "\n" << totalPizzaNum << " pizzas";
     }
 
     else {
-        cout << "\n" << pizzaNum << " pizza";
+        cout << "\n" << totalPizzaNum << " pizza";
     }
 
-    if (sideNum != 1){
-        cout << "\n" << sideNum << " sides";
-    }
-
-    else {
-        cout << "\n" << sideNum << " side";
-    }
-
-    if (drinkNum != 1){
-        cout << "\n" << drinkNum << " drinks\n\n";
+    if (totalSideNum != 1){
+        cout << "\n" << totalSideNum << " sides";
     }
 
     else {
-        cout << "\n" << drinkNum << " drink\n\n";
+        cout << "\n" << totalSideNum << " side";
+    }
+
+    if (totalDrinkNum != 1){
+        cout << "\n" << totalDrinkNum << " drinks\n\n";
+    }
+
+    else {
+        cout << "\n" << totalDrinkNum << " drink\n\n";
     }
 
     cout << "TOTAL = " << calculateTotal << endl;
@@ -199,6 +199,7 @@ int PizzaOrder()
 
     int pizzaChoice;
     bool done = false;
+    int pizzaNum;
 
     cout << "\n\n1) Pepperoni"
         << "\n2) Cheese"
@@ -263,6 +264,7 @@ int SideOrder()
 {
     int sideChoice;
     bool done = false;
+    int sideNum;
 
 
     cout << "\n\n1) Coleslaw (1 cup)"
@@ -328,6 +330,7 @@ int DrinksOrder()
 
     int drinkChoice;
     bool done = false;
+    int drinkNum;
 
     cout << "\n\n1) Coke"
         << "\n2) Sprite"
