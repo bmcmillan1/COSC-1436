@@ -1,0 +1,382 @@
+/*Brian McMillan
+Restaurant Menu Project
+COSC 1436
+Due 12/11/15
+*/
+
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+
+//DECLARE FUNCTION NAMES
+int PizzaOrder();
+int SideOrder();
+int DrinksOrder();
+int showMenu();
+
+
+
+//DECLARE VARIABLES
+bool done;
+int totalPizzaNum, totalSideNum, totalDrinkNum;
+string divider = "~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+string bill = " $$$$$$$$$$$$$$$$$$$$$$";
+double pizzaPrice = 15.95, sidePrice = 6.95, drinkPrice = 1.55, salesTax = 0.0825, total;
+int pizza, side, drink, choice;
+//double calculateTotal;
+string customerName;
+
+
+
+
+//BEGIN MAIN
+int main()
+{
+	cout << " Please enter your full name: ";
+	getline(cin, customerName);  //allows a space in the string
+
+
+	showMenu();
+
+	cout << "\n\n" << bill << "\n\n";
+
+	cout << " Thank you, " << customerName << ".\n Here is your total order:\n";
+
+	pizzaPrice = pizzaPrice * totalPizzaNum;
+	sidePrice = sidePrice * totalSideNum;
+	drinkPrice = drinkPrice * totalDrinkNum;
+	total = (pizzaPrice + sidePrice + drinkPrice);
+	salesTax = total * salesTax;
+
+	cout << "\n\n Price of items: $" << setprecision(2) << fixed << total;
+	total = total + salesTax;
+
+	cout << "\n Tax of items: $" << setprecision(2) << fixed << salesTax;
+	if (total > 100)
+	{
+		cout << "\n -------------------"
+			<< "\n Total price: $" << setprecision(2) << fixed << total << "\n"
+			<< " -------------------\n\n";
+
+	}
+
+	else if (total > 10 && total < 100)
+	{
+		cout << "\n -------------------"
+			<< "\n Total price: $" << setprecision(2) << fixed << total << "\n"
+			<< " -------------------\n\n";
+
+	}
+
+	else if (total < 10)
+	{
+		cout << "\n -------------------"
+			<< "\n Total price: $" << setprecision(2) << fixed << total << "\n"
+			<< " -------------------\n\n";
+
+	}
+	cout << bill << "\n\n";
+
+	system("pause");
+
+}
+//END MAIN
+
+
+
+
+
+
+
+// ******* BEGIN ALL FUNCTIONS HERE  ***********
+
+//MENU FUNCTION
+int showMenu()
+{
+
+	double calculateTotal = 0;
+	int menuChoice;
+	bool done = false;
+
+	do
+	{
+		cout << "\n\nWelcome to NYC Pizza, " << customerName << "!"
+			<< "\n\n1) Order pizza ($15.95ea)"
+			<< "\n2) Order side items ($6.95ea)"
+			<< "\n3) Order drinks ($1.55ea)"
+			<< "\n4) Exit menu and display bill";
+
+		cout << "\n\nEnter your choice (1-4): ";
+		cin >> menuChoice;
+		cout << divider;
+		switch (menuChoice)
+
+		{
+		case 1:
+		{
+			totalPizzaNum += PizzaOrder();
+			// cout << totalPizzaNum << endl;
+			break;
+		}
+
+		case 2:
+		{
+			totalSideNum += SideOrder();
+			break;
+		}
+
+		case 3:
+		{
+			totalDrinkNum += DrinksOrder();
+			break;
+		}
+
+		case 4:
+		{
+			calculateTotal = (totalPizzaNum + totalSideNum + totalDrinkNum);
+			done = true;  //Set true, exit while loop
+			break;
+		}
+
+		default:
+			break;  //Handle whenever exceptions come up
+		}
+
+
+	} while (!done);
+
+	if (choice == 4) {
+		cout << "\n\nORDER SUMMARY\n";
+	}
+
+	if (totalPizzaNum != 1) {
+		cout << "\n" << totalPizzaNum << " pizzas";
+	}
+
+	else {
+		cout << "\n" << totalPizzaNum << " pizza";
+	}
+
+	if (totalSideNum != 1) {
+		cout << "\n" << totalSideNum << " sides";
+	}
+
+	else {
+		cout << "\n" << totalSideNum << " side";
+	}
+
+	if (totalDrinkNum != 1) {
+		cout << "\n" << totalDrinkNum << " drinks\n\n";
+	}
+
+	else {
+		cout << "\n" << totalDrinkNum << " drink\n\n";
+	}
+
+	cout << "TOTAL = " << calculateTotal << endl;
+
+	return 0;
+}
+
+
+
+//PIZZA ORDER FUNCTION
+
+int PizzaOrder()
+{
+
+	int pizzaChoice;
+	bool done = false;
+	int pizzaNum;
+
+	cout << "\n\n1) Pepperoni"
+		<< "\n2) Cheese"
+		<< "\n3) Supreme"
+		<< "\n4) Vegetarian";
+
+	cout << "\n\nWhich type of pizza? ";
+	cin >> pizzaChoice;
+
+	while (!done) {
+
+		switch (pizzaChoice)
+		{
+		case 1:
+		{
+
+			cout << "\nHow many pepperoni pizzas? ";
+			cin >> pizzaNum;
+			cout << "\n" << divider;
+			done = true;
+			break;
+		}
+		case 2:
+		{
+			cout << "\nHow many cheese pizzas? ";
+			cin >> pizzaNum;
+			cout << "\n" << divider;
+			done = true;
+			break;
+		}
+		case 3:
+		{
+			cout << "\nHow many supreme pizzas? ";
+			cin >> pizzaNum;
+			cout << "\n" << divider;
+			done = true;
+			break;
+		}
+		case 4:
+		{
+			cout << "\nHow many vegetarian pizzas? ";
+			cin >> pizzaNum;
+			cout << "\n" << divider;
+			done = true;
+			break;
+		}
+		default:
+		{
+			cout << pizzaNum << " is not a valid number!";
+			break;
+		}
+		}
+	}
+
+	return pizzaNum;
+}
+
+
+//SIDE ORDER FUNCTION
+
+int SideOrder()
+{
+	int sideChoice;
+	bool done = false;
+	int sideNum;
+
+
+	cout << "\n\n1) Coleslaw (1 cup)"
+		<< "\n2) Fries (medium)"
+		<< "\n3) Salad (medium bowl)"
+		<< "\n4) Breadsticks (4)";
+	cout << "\n\nWhich type of side? ";
+	cin >> sideChoice;
+
+	while (!done)
+	{
+		switch (sideChoice)
+		{
+
+		case 1:
+		{
+			cout << "\nHow many cups of coleslaw? ";
+			cin >> sideNum;
+			cout << "\n" << divider;
+			break;
+		}
+
+		case 2:
+		{
+			cout << "\nHow many fries? ";
+			cin >> sideNum;
+			cout << "\n" << divider;
+			break;
+		}
+
+		case 3:
+		{
+			cout << "\nHow many bowls of salad? ";
+			cin >> sideNum;
+			cout << "\n" << divider;
+			break;
+		}
+
+		case 4:
+		{
+			cout << "\nHow many breadsticks? ";
+			cin >> sideNum;
+			cout << "\n" << divider;
+			break;
+		}
+
+		default:
+		{
+			cout << sideNum << " is not a valid character!";
+			break;
+		}
+		}
+		return sideNum;  //causes warning, but moving it down causes function to break
+	}
+
+
+}
+
+
+//DRINK ORDER FUNCTION
+int DrinksOrder()
+{
+
+	int drinkChoice;
+	bool done = false;
+	int drinkNum;
+
+	cout << "\n\n1) Coke"
+		<< "\n2) Sprite"
+		<< "\n3) Dr. Pepper"
+		<< "\n4) Lemonade";
+	cout << "\n\nWhich type of drink? ";
+	cin >> drinkChoice;
+
+	while (!done)
+	{
+		switch (drinkChoice)
+		{
+		case 1:
+		{
+			cout << "\nHow many Coke's? ";
+			cin >> drinkNum;
+			cout << "\n" << divider;
+			done = true;
+			break;
+		}
+
+		case 2:
+		{
+			cout << "\nHow many Sprite's? ";
+			cin >> drinkNum;
+			cout << "\n" << divider;
+			done = true;
+			break;
+		}
+
+		case 3:
+		{
+			cout << "\nHow many Dr. Pepper's? ";
+			cin >> drinkNum;
+			cout << "\n" << divider;
+			done = true;
+			break;
+		}
+
+		case 4:
+		{
+			cout << "\nHow many Lemonade's? ";
+			cin >> drinkNum;
+			cout << "\n" << divider;
+			done = true;
+			break;
+		}
+
+		default:
+		{
+			cout << drinkNum << " is not a valid character!";
+			break;
+		}
+		}
+	}
+
+	return drinkNum;
+}
